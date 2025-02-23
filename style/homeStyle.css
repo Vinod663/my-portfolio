@@ -1,3 +1,8 @@
+body, html {
+    cursor: url(../assets/media/arrowPoint.5b3f3b5c07736388f143.svg) 15 15, move;
+    height: 100%;
+    width: 100%;
+}
 body {
     background: #050810;
     /*box-sizing: border-box;*/
@@ -6,3 +11,9 @@ body {
     /*margin: 0;
     padding: 0;*/
 }
+
+nav a{
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+
+
