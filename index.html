@@ -57,17 +57,17 @@
 
 <!--Hero Section-->
 
-<section>
+<section class="hero">
 
-    <div>
+    <div class="hero-left">
         <!--Left side of Hero Section-->
-       <span><img src="assets/icons/wired-outline-2716-logo-clubhouse-hover-pinch.gif" width="40" alt="Hi">
-           <b>Hi There! I’m</b></span>
+       <span class="hi-line"><img id="hand-gif" src="assets/icons/wired-outline-2716-logo-clubhouse-hover-pinch.gif" width="40" alt="Hi">
+           <b class="welcome">Hi There! I’m</b></span>
         <h1>Vinod Niloshana</h1>
-        <b>And I’m Full-Stack Developer </b>
+        <b>And I’m <span>Full-Stack Developer</span></b>
         <p>Creating seamless experiences from frontend to backend.<br> Keep scrolling to see my work in action.</p>
 
-        <span>
+        <span class="sm-icons">
             <a href="https://www.linkedin.com/in/vinod-niloshana-09678731a" target="_blank">
             <img src="assets/social%20Media%20Icons/317725_linkedin_social_icon%20(1).png" alt="Linkedin" width="25" title="Linkedin">
             </a>
@@ -85,9 +85,10 @@
         <button ><b>Hire me</b></button>
     </div>
 
-    <div>
+    <div class="hero-right">
         <!--Right side of hero section-->
-        <img src="assets/media/clubHouse.svg" alt="Hero Section Animation">
+        <!--<img src="assets/media/clubHouse.svg" alt="Hero Section Animation">-->
+        <dotlottie-player src="assets/animation/Animation.lottie" background="transparent" speed="1" style="width: 500px;" loop autoplay></dotlottie-player>
     </div>
 </section>
 
@@ -410,5 +411,6 @@ Copyright © 2025 Vinod Niloshana
 
 
 <script src="assets/lib/fontawesome/js/all.min.js"></script>
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </body>
 </html>

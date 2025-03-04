@@ -78,6 +78,87 @@ nav a{
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
 }
 
+.hero{
+    position: relative;
+    display: grid;
+    /*justify-content: center;
+    align-items: center;*/
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    /*border: white solid 2px;*/
+}
+.hero-left{
+    width: fit-content;
+    height: fit-content;
+    padding: 0 8%;
+}
+#hand-gif{
+    width: 68px;
+}
+.welcome{
+    position: relative;
+    font-size: 48px;
+    font-weight: bold;
+    bottom: 10px;
+}
+.hero-left>h1{
+    position: relative;
+    font-size: 75px;
+    font-weight: bold;
+    bottom: 50px;
+}
+.hero-left>b{
+    position: relative;
+    bottom: 100px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.hero-left>b>span{
+    color: #7CF03D;
+}
+.hero-left>p{
+    position: relative;
+    bottom: 80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sm-icons{
+    position: relative;
+    bottom: 60px;
+    left: 10px;
+
+}
+.sm-icons img{
+    width: 40px;
+    margin-right: 10px;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+.hero-left>button{
+    position: relative;
+    bottom: 70px;
+    width: 204px;
+    height:55px;
+    background: #7CF03D;
+    color: black;
+    font-size: 36px;
+    border-radius: 36in;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+
+.hero-right{
+    width: fit-content;
+    height: fit-content;
+    padding: 0 8%;
+    margin: auto;
+}
+.hero-right>dotlottie-player{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 50px;
+    left: 100px;
+}
+
 
 @media all and (max-width: 1002px){
     .navbar{
@@ -89,6 +170,73 @@ nav a{
     .header{
         padding: 10px 2%;
     }
+}
+
+@media all and (max-width: 800px) and (min-width: 730px) {
+    .hero{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 0 0;
+
+
+    }
+    .hero-left{ /*welcome-description*/
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 0 2%;
+
+    }
+    .hero-right{ /*Animation*/
+        position: absolute;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 0 2%;
+
+    }
+    .hero-right>dotlottie-player{
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 729px)  {
+    .hero {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding: 0 2%;
+
+    }
+    .hero-left{ /*welcome-description*/
+        height: fit-content;
+        width: fit-content;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        margin-top: -90px;
+    }
+    .hero-right{ /*Animation*/
+        position: absolute;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 0 2%;
+        height: fit-content;
+        width: fit-content;
+
+    }
+
 }
 
 
