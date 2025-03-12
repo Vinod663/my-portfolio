@@ -148,13 +148,107 @@ nav a{
     border-radius: 40in;
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
 }
-#about{
+/*#about{
     width: 100%;
-    /*padding: 10px 4%;*/
+    !*padding: 10px 4%;*!
     position: relative;
     left: 60px;
     right: 60px;
     bottom: 50px;
+}*/
+#about>h2{
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 20px;
+    /*text-align: center;*/
+    margin-left: 560px;
+    /*padding: 10px 0;*/
+}
+#about>h2>span{
+    color: #7CF03D;
+}
+.about-section{
+    position: relative;
+    display: flex;
+    /*border: black solid 5px;*/
+    width: 100%;
+    /*margin-right: 200px;*/
+    left: 60px;
+    right: 60px;
+    bottom: 10px;
+}
+
+.about-section>div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-right: 120px;
+    margin-left:220px;
+    margin-bottom:120px;
+    font-size: 20px;
+    /*width: 1000px;*/
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+.home-img .img-box{
+    position: relative;
+    box-sizing: border-box;
+    width: 380px; /*22vw*/
+    height: 380px;
+    /*background: red;*/
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.home-img .img-box::before,.home-img .img-box::after{
+    content: "";
+    position: absolute;
+    width: 420px;/*need to decrease in media for desktops*/
+    height: 420px;
+    background: conic-gradient(transparent,transparent,transparent,#7CF03D);
+    transform:rotate(0deg) ;
+    animation: rotate 10s infinite linear;
+
+}
+.home-img .img-box::after{
+    animation-delay: -5s;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.home-img .img-box .img-item{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #050810;
+    border-radius: 50%;
+    border: 1px solid  #050810;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+.home-img .img-box .img-item img{
+    position: absolute;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
 }
 
 @media all and (max-width: 768px){
@@ -195,8 +289,6 @@ nav a{
 
     }
 }
-
-
 
 @media all and (max-width: 1024px){
     .navbar{
@@ -264,4 +356,86 @@ nav a{
         position: relative;
         bottom: 80px;
     }
+}
+
+@media all and (max-width: 500px){
+    .home-img .img-box{
+        width: 250px;
+        height: 250px;
+    }
+    .about-section>div:nth-child(2){
+        display: flex;
+        position: relative;
+        /*width: 300px;*/
+       /* margin-left:0;*/
+        margin-top: 50px;
+        font-size: 15px;
+        width: auto;
+        margin-right: 10px;
+        margin-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+
+
+        /*right: 15vw;*/
+
+
+
+    }
+    #about{
+        margin-top: -300px;
+
+    }
+    #about>h2{
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+
+
+}
+
+@media all and (max-width: 1000px) {
+    .about-section{
+        flex-direction: column;
+    }
+    .about-section>div:nth-child(2){
+        margin-left:10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about-section{
+
+        left: 10px;
+        right: 10px;
+    }
+    .home-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #about>h2{
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media all and (max-width: 1250px) and (min-width: 1001px) {
+    #about>h2{
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .about-section>div:nth-child(2) {
+        margin-left: 120px;
+    }
+
+
 }
