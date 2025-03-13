@@ -8,11 +8,12 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 html {
     cursor: url(../assets/media/arrowPoint.5b3f3b5c07736388f143.svg) 15 15, move;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 body {
     background: #050810;
@@ -31,6 +32,11 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+
+
+}
+.navbar{
+    overflow-y: hidden;
 }
 
 .navbar a{
@@ -40,6 +46,7 @@ body {
     font-weight: bold;
     border-bottom: transparent solid 2px;
     transition: all 0.3s ease;
+
 
 }
 
@@ -64,6 +71,7 @@ nav a{
     /*font-optical-sizing: auto;*/
     font-style: normal;
     color: white;
+    overflow-y: hidden;
 
     cursor: url(../assets/media/arrowPoint.5b3f3b5c07736388f143.svg) 15 15, move;
 }
@@ -92,6 +100,7 @@ nav a{
     justify-content: space-between;
     align-items: center;
     margin-top: -30px;
+    overflow-y: hidden;
 }
 
 
@@ -109,6 +118,7 @@ nav a{
     font-size: 50px;
     font-weight: bold;
     bottom: 50px;
+    overflow-y: hidden;
 }
 .hero-left>b{
     position: relative;
@@ -124,6 +134,7 @@ nav a{
     bottom: 80px;
     font-size: 17px;
     font-weight: bold;
+    overflow-y: hidden;
 }
 .sm-icons{
     position: relative;
@@ -163,6 +174,7 @@ nav a{
     margin-bottom: 20px;
     /*text-align: center;*/
     margin-left: 560px;
+    overflow-y: hidden;
     /*padding: 10px 0;*/
 }
 #about>h2>span{
@@ -177,11 +189,21 @@ nav a{
     left: 60px;
     right: 60px;
     bottom: 10px;
+
+}
+.about-section>div:nth-child(2)>p{
+    overflow-y: hidden;
+
+}
+.about-section>div:first-child{
+   /* background: white;*/
+    width: 650px;
 }
 
 .about-section>div:nth-child(2){
     display: flex;
     justify-content: space-between;
+    width: fit-content;
     text-align: center;
     align-items: center;
     margin-right: 120px;
@@ -197,6 +219,7 @@ nav a{
     font-variation-settings:
             "wdth" 100;
 }
+
 
 .home-img .img-box{
     position: relative;
@@ -363,6 +386,9 @@ nav a{
         width: 250px;
         height: 250px;
     }
+    .home-img{
+        width: 275px;
+    }
     .about-section>div:nth-child(2){
         display: flex;
         position: relative;
@@ -375,6 +401,7 @@ nav a{
         margin-left: 10px;
         padding-left: 10px;
         padding-right: 10px;
+        /*right: 10px;*/
 
 
 
@@ -423,6 +450,9 @@ nav a{
         margin-left: 0;
         margin-bottom: 50px;
     }
+    .about-section>div:first-child{
+        width:auto;
+    }
 
 }
 
@@ -435,6 +465,9 @@ nav a{
 
     .about-section>div:nth-child(2) {
         margin-left: 120px;
+    }
+    .about-section>div:first-child{
+        width: 750px;
     }
 
 
