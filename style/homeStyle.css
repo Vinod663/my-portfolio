@@ -274,6 +274,105 @@ nav a{
     mix-blend-mode: lighten;
 }
 
+#services>h2{
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 100px;/*/////*/
+    text-align: center;
+    overflow-y: hidden;
+    /*padding: 10px 0;*/
+}
+#services>h2>span{
+    color: #7CF03D;
+}
+#services{
+    position: relative;
+    bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.service-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* border: black solid 5px;*/
+    width: 100%;
+}
+.service-container>div{
+    padding: 0 20px 0 20px;
+    height: 400px;
+    background-color: rgba(124, 240, 61, 9%);
+    box-shadow: 0 5px 10px rgba(124, 240, 61, 0.8);
+    /*border: 3px solid darkslategray;*/
+    margin: 50px 50px 50px 50px;
+    border-radius: 8%;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    transition: .5s ease;
+
+}
+.service-container .service-box:hover{
+    background-color: rgba(124, 240, 61, 20%);
+    transform: scale(1.02);
+}
+.service-container>div>h3{
+    text-align: center;
+    font-size: 30px;
+    /*font-weight: bold;*/
+    color: white;
+    overflow-y: hidden;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+.ser-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.service-container>div>p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    margin: 20px 40px 10px 40px;
+    overflow-y: hidden;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+.download-cv-button{
+    width: 200px;
+    height:47px;
+    background: #7CF03D;
+    color: black;
+    font-size: 23px;
+    border-radius: 40in;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+.download-cv{
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+
 @media all and (max-width: 768px){
     .hero{
         /*flex-direction: column;*/
@@ -293,6 +392,7 @@ nav a{
         margin: auto;
         padding: 0 0;
 
+
     }
     .hero-left{ /*welcome-description*/
         grid-column: 1/2;
@@ -311,6 +411,22 @@ nav a{
 
 
     }
+
+    .service-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+}
+
+@media all and (max-width: 1024px) and (min-width: 769px){
+    .service-container>div>p{
+        font-size: 15px;
+    }
+    .service-container>div>h3{
+        font-size: 25px;
+    }
+
 }
 
 @media all and (max-width: 1024px){
@@ -323,6 +439,14 @@ nav a{
     .header{
         padding: 10px 2%;
     }
+
+    .service-container>div {
+        overflow: hidden;
+        margin: 20px 20px 50px 20px;
+    }
+
+
+
 
 
 
@@ -452,6 +576,10 @@ nav a{
     }
     .about-section>div:first-child{
         width:auto;
+    }
+
+    #services>h2{
+        margin-top: 20px;
     }
 
 }
