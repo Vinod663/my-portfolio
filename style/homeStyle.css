@@ -100,24 +100,32 @@ nav a{
     justify-content: space-between;
     align-items: center;
     margin-top: -30px;
-    overflow-y: hidden;
+    /* overflow-y: hidden;*/
 }
 
 
 #hand-gif{
     width: 68px;
+    top: 0;
+    left: 0;
+    margin-bottom: 65px;
+
 }
 .welcome{
+    display: inline;
     position: relative;
     font-size: 35px;
     font-weight: bold;
-    bottom: 10px;
+    bottom:65px;
+    overflow-y: hidden;
+
+
 }
 .hero-left>h1{
     position: relative;
     font-size: 50px;
     font-weight: bold;
-    bottom: 50px;
+    bottom: 70px;
     overflow-y: hidden;
 }
 .hero-left>b{
@@ -129,7 +137,7 @@ nav a{
 .hero-left>b>span{
     color: #7CF03D;
 }
-.hero-left>p{
+.hero-des{
     position: relative;
     bottom: 80px;
     font-size: 17px;
@@ -158,6 +166,10 @@ nav a{
     font-size: 33px;
     border-radius: 40in;
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+.hero-right>dotlottie-player{
+    position: relative;
+    width: 500px;
 }
 /*#about{
     width: 100%;
@@ -196,7 +208,7 @@ nav a{
 
 }
 .about-section>div:first-child{
-   /* background: white;*/
+    /* background: white;*/
     width: 650px;
 }
 
@@ -461,9 +473,11 @@ nav a{
     }
     #hand-gif{
         width: 48px;
+        margin-bottom: 30px;
     }
     .welcome{
         font-size: 25px;
+        bottom:40px;
     }
     .hero-left>h1{
         font-size: 40px;
@@ -473,7 +487,7 @@ nav a{
         bottom: 70px;
         font-size: 25px;
     }
-    .hero-left>p{
+    .hero-des{
         bottom: 70px;
         font-size: 12px;
     }
@@ -503,6 +517,12 @@ nav a{
         position: relative;
         bottom: 80px;
     }
+    .hero-right>dotlottie-player{
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 350px;
+    }
 }
 
 @media all and (max-width: 500px){
@@ -517,7 +537,7 @@ nav a{
         display: flex;
         position: relative;
         /*width: 300px;*/
-       /* margin-left:0;*/
+        /* margin-left:0;*/
         margin-top: 50px;
         font-size: 15px;
         width: auto;
@@ -548,6 +568,12 @@ nav a{
 
 }
 
+@media all and (max-width: 1000px) and (min-width: 769px) {
+    .hero-right>dotlottie-player {
+        width: 350px;
+    }
+}
+
 @media all and (max-width: 1000px) {
     .about-section{
         flex-direction: column;
@@ -572,6 +598,7 @@ nav a{
     #about>h2{
         text-align: center;
         margin-left: 0;
+        margin-top: 30px;
         margin-bottom: 50px;
     }
     .about-section>div:first-child{
@@ -581,6 +608,7 @@ nav a{
     #services>h2{
         margin-top: 20px;
     }
+
 
 }
 
