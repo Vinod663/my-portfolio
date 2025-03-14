@@ -308,7 +308,7 @@ nav a{
 .service-container{
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     /* border: black solid 5px;*/
     width: 100%;
 }
@@ -318,13 +318,14 @@ nav a{
     background-color: rgba(124, 240, 61, 9%);
     box-shadow: 0 5px 10px rgba(124, 240, 61, 0.8);
     /*border: 3px solid darkslategray;*/
-    margin: 50px 50px 50px 50px;
+    margin: 20px 20px 20px 20px;
     border-radius: 8%;
     align-items: center;
     justify-content: center;
     left: 0;
     right: 0;
     transition: .5s ease;
+    /*overflow-y: hidden;*/
 
 }
 .service-container .service-box:hover{
@@ -349,6 +350,26 @@ nav a{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+.explore-btn{
+    width: 120px;
+    height:32px;
+    background: rgba(124, 240, 61, 85%);
+    border: solid 2px white;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 40in;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+.explore{
+    position: relative;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    /*align-items: center;*/
+
 }
 .service-container>div>p{
     text-align: center;
@@ -381,7 +402,7 @@ nav a{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 60px;
 }
 
 
@@ -424,19 +445,40 @@ nav a{
 
     }
 
-    .service-container{
-        grid-template-columns: repeat(1,1fr);
-    }
+
 
 
 }
+@media all and (max-width: 600px){
+     .service-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .download-cv{
+        margin-top: 30px;
+    }
+}
 
-@media all and (max-width: 1024px) and (min-width: 769px){
+@media all and (max-width: 1300px) and (min-width: 1025px){
+    .service-container>div>h3{
+        font-size: 25px;
+    }
+    .service-container>div>p{
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 1024px) and (min-width: 601px){
     .service-container>div>p{
         font-size: 15px;
     }
     .service-container>div>h3{
         font-size: 25px;
+    }
+    .service-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .download-cv{
+        margin-top: 40px;
     }
 
 }
