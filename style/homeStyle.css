@@ -311,6 +311,8 @@ nav a{
     grid-template-columns: repeat(4,1fr);
     /* border: black solid 5px;*/
     width: 100%;
+    /*padding-left: 20px;
+    padding-right: 20px;*/
 }
 .service-container>div{
     padding: 0 20px 0 20px;
@@ -404,6 +406,100 @@ nav a{
     align-items: center;
     margin-top: 60px;
 }
+
+/* Achievements Section Styling */
+.achievements-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+
+}
+
+.achievements-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    overflow-y: hidden;
+    color: white;
+}
+
+/* Achievements Container */
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.achievement-card {
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    border: #7CF03D solid 1.5px;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.achievement-card img {
+    width: 100%;
+    height: 250px;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.achievement-card:hover img {
+    transform: scale(1.05);
+}
+
+.achievement-description {
+    padding: 1rem;
+    background: transparent;
+    flex-grow: 1; /* Allow description to fill remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-description pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Arial', sans-serif;
+    color: #989898;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Adjustments of Achievements */
+@media screen and (max-width: 768px) {
+    .achievements-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .achievements-section h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/*///////*/
 
 
 @media all and (max-width: 768px){

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    cursor: url(../assets/media/arrowPoint.5b3f3b5c07736388f143.svg) 15 15, move;
+    overflow-x: hidden;
+}
+body {
+    background: #050810;
+    color: #f5f5f5;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 4%;
+    background: #050810;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: white;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.navbar a:hover,.navbar a:active{
+    color: #7CF03D;
+}
+.navbar a:focus{
+    color: #7CF03D;
+}
+
+nav a{
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+.logo{
+    font-weight: normal;
+    font-size: 40px;
+    font-family: "Roboto Condensed", serif;
+    /*font-optical-sizing: auto;*/
+    font-style: normal;
+    color: white;
+
+    cursor: url(../assets/media/arrowPoint.5b3f3b5c07736388f143.svg) 15 15, move;
+}
+.logo span {
+    color: #7CF03D;
+
+}
+
+#bars{
+    position: absolute;
+    width: fit-content;
+    height: 40px;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-right: 1vw;
+    display: none;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+
+.hero{
+    position: relative;
+    display: grid;
+    /*justify-content: center;
+    align-items: center;*/
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    /*border: white solid 2px;*/
+}
+.hero-left{
+    width: fit-content;
+    height: fit-content;
+    padding: 0 8%;
+}
+#hand-gif{
+    width: 60px;
+}
+.welcome{
+    position: relative;
+    font-size: 35px;
+    font-weight: bold;
+    bottom: 10px;
+}
+.hero-left>h1{
+    position: relative;
+    font-size: 50px;
+    font-weight: bold;
+    bottom: 50px;
+}
+.hero-left>b{
+    position: relative;
+    bottom: 90px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.hero-left>b>span{
+    color: #7CF03D;
+}
+.hero-left>p{
+    position: relative;
+    bottom: 80px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.sm-icons{
+    position: relative;
+    bottom: 60px;
+    left: 10px;
+
+}
+.sm-icons img{
+    width: 38px;
+    margin-right: 10px;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+.hero-left>button{
+    position: relative;
+    margin-left: 4px;
+    bottom: 70px;
+    width: 200px;
+    height:47px;
+    background: #7CF03D;
+    color: black;
+    font-size: 33px;
+    border-radius: 40in;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+}
+
+.hero-right{
+    width: fit-content;
+    height: fit-content;
+    padding: 0 8%;
+    margin: auto;
+}
+.hero-right>dotlottie-player{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 50px;
+    left: 100px;
+}
+
+
+@media all and (max-width: 1024px){
+    .navbar{
+        display: none;
+    }
+    #bars{
+        display: block;
+    }
+    .header{
+        padding: 10px 2%;
+    }
+}
+
+@media all and (max-width: 800px) and (min-width: 730px) {
+    .hero{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 0 0;
+
+
+    }
+    .hero-left{ /*welcome-description*/
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 0 2%;
+
+    }
+    .hero-right{ /*Animation*/
+        position: absolute;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 0 2%;
+
+    }
+    .hero-right>dotlottie-player{
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 729px)  {
+    .hero {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding: 0 2%;
+
+    }
+    .hero-left{ /*welcome-description*/
+        height: fit-content;
+        width: fit-content;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        margin-top: -10px;
+    }
+    .hero-right{ /*Animation*/
+        position: absolute;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 0 2%;
+        height: fit-content;
+        width: fit-content;
+
+    }
+
+}
+@media all and (max-width: 529px)  {
+    .hero-left { /*welcome-description*/
+        margin-top: -50px;
+    }
+
+}
+@media all and (max-width: 375px)  {
+    .hero-left { /*welcome-description*/
+        margin-top: -90px;
+    }
+
+}
+
+
