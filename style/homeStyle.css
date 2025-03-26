@@ -162,7 +162,7 @@ nav a{
     width: 200px;
     height:47px;
     background: #7CF03D;
-    color: black;
+    color: #050810;
     font-size: 33px;
     border-radius: 40in;
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
@@ -358,7 +358,7 @@ nav a{
     height:32px;
     background: rgba(124, 240, 61, 85%);
     border: solid 2px white;
-    color: black;
+    color: #050810;
     font-size: 17px;
     font-weight: bold;
     border-radius: 40in;
@@ -393,7 +393,7 @@ nav a{
     width: 200px;
     height:47px;
     background: #7CF03D;
-    color: black;
+    color: #050810;
     font-size: 23px;
     border-radius: 40in;
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
@@ -482,6 +482,130 @@ nav a{
     line-height: 1.6;
     margin: 0;
 }
+
+/* Tools & Technologies Section Styling */
+#tools {
+    max-width: 1200px;
+    margin:auto;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#tools h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    overflow-y: hidden;
+}
+
+#tools h2 span {
+    color: #7CF03D;
+}
+
+
+#tools .span-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #7CF03D;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#tools .span-2 > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    text-align: center;
+    color: #7CF03D;
+    background-color: #050810;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    overflow-y: hidden;
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
+#tools .span-2 img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+#tools .span-2 > *:hover {
+    transform: scale(1.1);
+    color: #7CF03D;
+}
+
+#tools .span-2 > *:hover img {
+    /*transform: rotate(360deg);*/
+    animation-name: rotate;
+    animation-duration: 0.3s;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*Responsive Adjustments of tools and tech*/
+@media screen and (max-width: 768px) {
+    #tools h2 {
+        font-size: 2rem;
+    }
+
+    #tools .span-2 {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    #tools .span-2 > * {
+        width: 80px;
+        font-size: 0.8rem;
+    }
+
+    #tools .span-2 img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #tools .span-2 {
+        gap: 0.5rem;
+        padding: 0.8rem;
+    }
+
+    #tools .span-2 > * {
+        width: 70px;
+        font-size: 0.7rem;
+    }
+
+    #tools .span-2 img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media all and (max-width: 1250px)  {
+    #tools {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+/*////////*/
 
 /* Responsive Adjustments of Achievements */
 @media screen and (max-width: 768px) {
