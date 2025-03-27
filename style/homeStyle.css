@@ -819,6 +819,7 @@ nav a{
     font-size: 2rem;
     cursor: pointer;
     user-select: none;
+    overflow-y: hidden;
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
 }
 
@@ -857,6 +858,172 @@ nav a{
 .assignments-container a:hover {
     color: #7CF03D;
 }
+
+#contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background-color:transparent;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#contact h2 {
+    color: #7CF03D;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    overflow-y: hidden;
+}
+
+.contact-email,
+.contact-phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: white;
+    overflow-y: hidden;
+}
+
+.contact-email img,
+.contact-phone img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+
+}
+
+.social-links a img:hover {
+    transform: scale(1.2);
+}
+
+.download-cv-btn {
+    background-color: #7CF03D;
+    color: #050810;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+    font-weight: bold;
+    width: fit-content;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv-btn:hover {
+    background-color: #5acd1b;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(124, 240, 61, 9%);
+    border: 1.5px solid #7CF03D;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    background-color: #7CF03D;
+    color: #050810;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #5acd1b;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 3rem;
+    color: rgba(255, 255, 255, 0.59);
+    overflow-y:hidden;
+}
+
+/* Responsive Design for footer */
+@media (max-width: 1024px) {
+    #contact {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    #contact {
+        padding: 1rem;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .social-links{
+        justify-content: center;
+        margin-bottom: 0.8rem;
+    }
+    .copyright{
+        font-size: 0.8rem;
+    }
+    .download-cv-btn{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .contact-info{
+        left: 0;
+        right: 0;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/*////////*/
 
 /*Responsive Design of My-Work*/
 
