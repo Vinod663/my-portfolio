@@ -147,7 +147,7 @@ nav a{
 .sm-icons{
     position: relative;
     bottom: 60px;
-    left: 10px;
+    /*left: 10px;*/
 
 }
 .sm-icons img{
@@ -155,9 +155,10 @@ nav a{
     margin-right: 10px;
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
 }
+
 .hero-left>button{
     position: relative;
-    margin-left: 4px;
+    /*margin-left: 4px;*/
     bottom: 70px;
     width: 200px;
     height:47px;
@@ -1279,6 +1280,9 @@ nav a{
 
 
     }
+    .sm-icons img:nth-child(4){
+        margin-right: 0;
+    }
     .hero-left{ /*welcome-description*/
         grid-column: 1/2;
         grid-row: 2/3;
@@ -1286,6 +1290,9 @@ nav a{
         bottom: 200px;
 
 
+    }
+    .hero-left>button{
+        margin-left: -5px;
     }
     .hero-right{ /*Animation*/
 
@@ -1387,7 +1394,7 @@ nav a{
     }
     .sm-icons{
         bottom: 60px;
-        left: 10px;
+        /*left: 10px;*/
 
     }
     .sm-icons img{
@@ -1396,7 +1403,7 @@ nav a{
         cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
     }
     .hero-left>button{
-        margin-left: 4px;
+
         bottom: 70px;
         width: 170px;
         height:37px;
@@ -1471,6 +1478,7 @@ nav a{
 @media all and (max-width: 1000px) {
     .about-section{
         flex-direction: column;
+        position: static;
     }
     .about-section>div:nth-child(2){
         margin-left:10px;
@@ -1494,6 +1502,7 @@ nav a{
         margin-left: 0;
         margin-top: 30px;
         margin-bottom: 50px;
+
     }
     .about-section>div:first-child{
         width:auto;
