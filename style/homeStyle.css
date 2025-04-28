@@ -263,7 +263,7 @@ nav a{
     transform: translateY(-5px);
 }
 
-.hero-left>button{
+.hero-left>a>button{
     position: relative;
     /*margin-left: 4px;*/
     bottom: 70px;
@@ -280,14 +280,14 @@ nav a{
 
 }
 /* Simple button transitions  */
-.hero-left > button:hover {
+.hero-left >a> button:hover {
     background-color: #050810;
     color: #7CF03D;
     box-shadow:  inset 0 0 0 2px #7CF03D;
 }
 
 /* Add subtle shine effect on hover */
-.hero-left > button::before {
+.hero-left >a> button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -298,7 +298,7 @@ nav a{
     transition: 0.5s;
 }
 
-.hero-left > button:hover::before {
+.hero-left >a> button:hover::before {
     left: 100%;
 }
 
@@ -1468,7 +1468,7 @@ nav a{
 
 
     }
-    .hero-left>button{
+    .hero-left>a>button{
         margin-left: -5px;
     }
     .hero-right{ /*Animation*/
@@ -1579,7 +1579,7 @@ nav a{
         margin-right: 8px;
         cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
     }
-    .hero-left>button{
+    .hero-left>a>button{
 
         bottom: 70px;
         width: 170px;
