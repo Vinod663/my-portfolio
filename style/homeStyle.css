@@ -104,7 +104,7 @@ body::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1001;
 
 }
 .navbar{
@@ -1708,3 +1708,29 @@ nav a{
 
 
 }
+
+@media all and (max-width: 1024px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background: #050810;
+        position: fixed;
+        top: 52px; /* adjust this if your header is taller */
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 1rem;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+
+
