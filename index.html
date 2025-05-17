@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="style/homeStyle.css">
     <link rel="stylesheet" href="/assets/lib/normalize.css">
+    <!--Link Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -404,27 +406,52 @@
 
     <div>
         <h2 class="assignment-section-title">Assignments</h2>
+
         <div class="assignments-container">
-            <i class="nav-icon fas fa-less-than"></i>
+            <i class="nav-icon fas fa-less-than" id="prevBtn"></i>
 
             <div class="assignment-card">
                 <div>
                     <a href="#">Assignment 01</a>
+                    <img src="assets/assignment%20photos/img_2.png" alt="CSS Positions">
+                    <p>CSS Positions</p>
+                    <a href="https://github.com/Vinod663/CSS-Positions.git" target="_blank">
+                        <button class="project-explore-btn">Explore</button>
+                    </a>
                 </div>
             </div>
             <div class="assignment-card">
                 <div>
                     <a href="#">Assignment 02</a>
+                    <img src="assets/assignment%20photos/img_3.png" alt="CSS Animations and Transitions">
+                    <p>CSS Animations and Transitions</p>
+                    <a href="https://github.com/Vinod663/CSS-Animations-and-Transitions.git" target="_blank">
+                        <button class="project-explore-btn">Explore</button>
+                    </a>
                 </div>
             </div>
             <div class="assignment-card">
                 <div>
                     <a href="#">Assignment 03</a>
+                    <img src="assets/assignment%20photos/img.png" alt="DOM Manipulation with JS">
+                    <p>DOM Manipulation with JS</p>
+                    <a href="https://github.com/Vinod663/DOM-Manipulation-JS-02.git" target="_blank">
+                        <button class="project-explore-btn">Explore</button>
+                    </a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div>
+                    <a href="#">Assignment 04</a>
+                    <img src="assets/assignment%20photos/img_1.png" alt="DOM Manipulation with JS-2">
+                    <p>DOM Manipulation with JS-2</p>
+                    <a href="https://github.com/Vinod663/DOM-Manipulation-JS-03.git" target="_blank">
+                        <button class="project-explore-btn">Explore</button>
+                    </a>
                 </div>
             </div>
 
-
-            <i class="nav-icon fas fa-greater-than"></i>
+            <i class="nav-icon fas fa-greater-than" id="nextBtn"></i>
         </div>
     </div>
 </section>
@@ -471,9 +498,12 @@
     </div>
 </footer>
 
-
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
 <script src="assets/lib/fontawesome/js/all.min.js"></script>
 <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+-->
 <script src="js/function.js"></script>
 </body>
 </html>

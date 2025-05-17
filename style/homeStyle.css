@@ -936,12 +936,13 @@ nav a{
 }
 
 .project-card, .assignment-card {
-    background-color: rgba(124, 240, 61, 9%);
+    background-color: rgba(124, 240, 61, 9%) ;
     border: #7CF03D solid 1.5px;
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
-    width: 300px;
+    width: 300px; /*300*/
+    /*user-select: none;*/
     transition: transform 0.3s ease;
 }
 
@@ -1036,6 +1037,29 @@ nav a{
 .assignments-container a:hover {
     color: #7CF03D;
 }
+
+.assignment-card img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.assignment-card p{
+    margin-bottom: 1rem;
+    overflow-y: hidden;
+    font-size: 13px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-variation-settings:
+            "wdth" 100;
+}
+
+
 
 #contact {
     max-width: 1200px;
