@@ -457,6 +457,7 @@ nav a{
     bottom: 50px;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 .service-container{
     position: relative;
@@ -1180,6 +1181,14 @@ nav a{
 
 .contact-form button:hover {
     background-color: #5acd1b;
+}
+#nameError{
+    color: red;
+    overflow-y: hidden;
+}
+#emailError{
+    color: red;
+    overflow-y: hidden;
 }
 
 .copyright {

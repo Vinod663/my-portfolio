@@ -219,7 +219,7 @@
         </div>
     </div>
 
-    <div class="download-cv"><button class="download-cv-button"><b>Download CV</b></button></div>
+    <div class="download-cv" data-aos="fade-up" data-aos-duration="1200"><button class="download-cv-button"><b>Download CV</b></button></div>
 
 </section>
 
@@ -499,8 +499,10 @@
     </div>
     <div class="contact-form">
         <form>
-            <input type="text" id="name" placeholder="Your Name" name="name" required>
-            <input type="email" id="email" placeholder="Your Email" name="email" required>
+            <input type="text" id="name" placeholder="Your Name" name="name" required autocomplete="on">
+            <small id="nameError"></small>
+            <input type="email" id="email" placeholder="Your Email" name="email" required autocomplete="on">
+            <small id="emailError"></small>
             <input type="text" id="subject" placeholder="Your Subject" name="subject" required>
             <textarea id="message" placeholder="Your Message" rows="5" name="message" required></textarea>
             <button type="submit" id="sendEmailBtn">Submit</button>
