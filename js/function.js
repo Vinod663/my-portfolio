@@ -7,6 +7,7 @@ window.onload = function () {
     });
 };
 
+
 $('#sendEmailBtn').on('click', function (e) {
     /*e.preventDefault();*/
     let hasError = false;
