@@ -1752,7 +1752,7 @@ nav a{
         flex-direction: column;
         background: #050810;
         position: fixed;
-        top: 52px; /* adjust this if your header is taller */
+        top: 52px;
         left: 0;
         width: 100%;
         z-index: 1000;
