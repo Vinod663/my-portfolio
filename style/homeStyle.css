@@ -678,7 +678,7 @@ nav a{
     width: 100%;
     max-width: 1200px; /* NEW: Prevents ultra-wide monitor stretching */
     margin: 0 auto;    /* Centers it */
-    padding-top: 60px;
+    padding-top: 10px;
     padding-bottom: 60px;
 }
 
