@@ -14,7 +14,7 @@
 
 html {
     cursor: url(../assets/media/arrowPoint.5b3f3b5c07736388f143.svg) 15 15, move;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 body {
     background: #050810;
