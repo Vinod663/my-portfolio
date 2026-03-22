@@ -67,3 +67,30 @@ $('#sendEmailBtn').on('click', function (e) {
     $('#subject').val('');
     $('#message').val('');
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper(".achievementSwiper", {
+        effect: "coverflow",
+        grabCursor: false,
+        centeredSlides: true,
+        slidesPerView: "auto", 
+        loop: true, 
+        watchSlidesProgress: true, 
+        slideToClickedSlide: true, 
+        coverflowEffect: {
+            rotate: 15,    
+            stretch: -40,  
+            depth: 200,    
+            modifier: 1,
+            slideShadows: false, 
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true, /* Ensures dots are clickable */
+        },
+        autoplay: {
+            delay: 4000, 
+            disableOnInteraction: false,
+        },
+    });
+});

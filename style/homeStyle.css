@@ -8,7 +8,8 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */ 
+    /* //version 2 */
 }
 
 html {
@@ -608,15 +609,15 @@ nav a{
 }
 
 /* Achievements Container */
-.achievements-container {
+/* .achievements-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     overflow-y: hidden;
-}
+} */
 
-.achievement-card {
+/* .achievement-card {
     background: transparent;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -629,42 +630,173 @@ nav a{
     flex-direction: column;
     margin-top: 8px;
     border: #7CF03D solid 1.5px;
-}
+} */
 
-.achievement-card:hover {
+/* .achievement-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
+} */
 
-.achievement-card img {
+/* .achievement-card img {
     width: 100%;
     height: 250px;
     max-height: 350px;
     object-fit: cover;
     object-position: center;
-}
+} */
 
-.achievement-card:hover img {
+/* .achievement-card:hover img {
     transform: scale(1.05);
-}
+} */
 
-.achievement-description {
+/* .achievement-description {
     padding: 1rem;
     background: transparent;
-    flex-grow: 1; /* Allow description to fill remaining space */
+    flex-grow: 1; 
+   
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.achievement-description pre {
+/* .achievement-description pre {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: 'Arial', sans-serif;
     color: #989898;
     line-height: 1.6;
     margin: 0;
+} */
+
+
+.achievements-section {
+    padding: 4rem 0;
+    overflow: hidden; 
 }
+
+.swiper.achievementSwiper {
+    width: 100%;
+    max-width: 1200px; /* NEW: Prevents ultra-wide monitor stretching */
+    margin: 0 auto;    /* Centers it */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.achievementSwiper .swiper-slide {
+    width: 320px;  /* MUST be a fixed width for the 3D effect to work */
+    height: 460px; /* Fixed height for uniformity */
+    transition: all 0.4s ease;
+}
+
+.achievementSwiper .achievement-card {
+    background: rgba(5, 8, 16, 0.7); /* Deep dark semi-transparent */
+    border: 2px solid rgba(124, 240, 61, 0.15); /* Very subtle green border inactive */
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    transition: all 0.4s ease;
+
+}
+
+.achievementSwiper .achievement-description p {
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+}
+
+.achievementSwiper .swiper-slide-active .achievement-card {
+    border-color: rgba(124, 240, 61, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), /* Drop shadow */
+                0 0 25px rgba(124, 240, 61, 0.3), /* Outer neon glow */
+                inset 0 0 15px rgba(124, 240, 61, 0.1); /* Inner glow */
+    transform: translateY(-10px); /* Lifts the active card up elegantly */
+}
+
+.achievementSwiper .achievement-card img {
+    width: 100%;
+    height: 220px; 
+    object-fit: contain; /* Changed from 'cover' to 'contain' */
+    object-position: center; /* Centers the image perfectly */
+    background-color: #020308; /* Very dark background behind the image to fill empty gaps */
+    border-bottom: 2px solid rgba(124, 240, 61, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.achievementSwiper .swiper-slide-active .achievement-card img {
+    transform: scale(1.05);
+}
+
+.achievementSwiper .achievement-description {
+    padding: 25px 20px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, transparent, rgba(124, 240, 61, 0.05));
+}
+
+.achievementSwiper .achievement-description pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Poppins', sans-serif;
+    color: #e0e0e0;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Increase the clickable container area */
+.achievementSwiper .swiper-pagination {
+    padding: 15px 0; /* Adds safe padding around the dots */
+    bottom: 5px;
+}
+
+.achievementSwiper .swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 0.3;
+    width: 12px;  /* Slightly larger default dot */
+    height: 12px;
+    margin: 0 10px !important; /* Adds more space BETWEEN dots */
+    
+    /* THE MAGIC TRICK: Creates a large, invisible clickable border around the dot */
+    border: 8px solid transparent; 
+    background-clip: padding-box; 
+    
+    transition: all 0.3s ease;
+            cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
+
+}
+
+.achievementSwiper .swiper-pagination-bullet-active {
+    background: #7CF03D;
+    opacity: 1;
+    box-shadow: 0 0 10px #7CF03D;
+    width: 35px; /* Stretches dot into a modern pill shape */
+    border-radius: 10px;
+    border: 8px solid transparent; /* Keeps the clickable area large */
+
+}
+
+/* Apply the custom green open palm on hover */
+.achievementSwiper .swiper-wrapper {
+    cursor: url(../assets/media/palmHand.svg) 16 16, grab !important;
+}
+
+/* Swap to the closed green fist when clicking/dragging */
+.achievementSwiper .swiper-wrapper:active {
+    cursor: url(../assets/media/grabHand.svg) 16 16, grabbing !important;
+}
+
 
 /* Tools & Technologies Section Styling */
 #tools {
