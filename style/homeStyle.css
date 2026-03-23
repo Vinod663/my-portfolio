@@ -8,6 +8,7 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+    
     /* overflow-x: hidden; */ 
     /* //version 2 */
 }
@@ -1062,7 +1063,7 @@ nav a{
     display: flex;
 }
 
-.projects-container, .assignments-container {
+/* .projects-container, .assignments-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1070,25 +1071,24 @@ nav a{
     position: relative;
     overflow-y: hidden;
     margin-top: 0.5rem;
-}
+} */
 
-.project-card, .assignment-card {
+/* .project-card, .assignment-card {
     background-color: rgba(124, 240, 61, 9%) ;
     border: #7CF03D solid 1.5px;
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
-    width: 300px; /*300*/
-    /*user-select: none;*/
+    width: 300px; 
     transition: transform 0.3s ease;
-}
+} */
 
-.project-card:hover, .assignment-card:hover {
+/* .project-card:hover, .assignment-card:hover {
     background-color: rgba(124, 240, 61, 20%);
-    /* transform: scale(1.01);*/
-}
+    
+} */
 
-.project-card img {
+/* .project-card img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -1111,7 +1111,7 @@ nav a{
     font-style: normal;
     font-variation-settings:
             "wdth" 100;
-}
+} */
 
 .project-explore-btn {
     background-color: rgba(124, 240, 61, 9%);
@@ -1138,6 +1138,136 @@ nav a{
     overflow-y: hidden;
     cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, move !important;
 }
+
+
+/* Projects Wrapper */
+.projects-interactive-wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 50px; /* Creates safe space for the arrows on desktop */
+}
+
+/* Swiper Container */
+.swiper.projectSwiper {
+    width: 100%;
+    padding: 20px 0 60px 0; /* Space for the bottom shadow and pagination dots */
+}
+
+/* Ensure slides stretch to equal heights */
+.projectSwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: auto; 
+}
+
+/* Upgraded Project Card Design */
+.project-card {
+    background-color: rgba(5, 8, 16, 0.7); /* Deep dark theme */
+    border: 1.5px solid rgba(124, 240, 61, 0.3);
+    border-radius: 15px;
+    padding: 1.2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    background-color: rgba(124, 240, 61, 0.05);
+    border-color: #7CF03D;
+    box-shadow: 0 10px 25px rgba(124, 240, 61, 0.15);
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(124, 240, 61, 0.2);
+}
+
+.project-card h5 {
+    color: white;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    flex-grow: 1; /* Pushes the button to the bottom evenly */
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* Custom Navigation Arrows */
+.project-button-prev,
+.project-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #7CF03D;
+    font-size: 2rem;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, pointer !important;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.project-button-prev:hover,
+.project-button-next:hover {
+    opacity: 1;
+    text-shadow: 0 0 15px #7CF03D;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.project-button-prev { left: 0; }
+.project-button-next { right: 0; }
+
+/* Custom Cursor for Slider Track */
+.projectSwiper .swiper-wrapper {
+    cursor: url(../assets/media/palmHand.svg) 16 16, grab !important;
+}
+.projectSwiper .swiper-wrapper:active {
+    cursor: url(../assets/media/grabHand.svg) 16 16, grabbing !important;
+}
+
+/* Project Pagination Dots - Theme Colors */
+.projectSwiper .swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 0.3;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px !important;
+    transition: all 0.3s ease;
+    cursor: url(../assets/media/arrowClick.7219a884818048edacbe.svg) 15 15, pointer !important;
+}
+
+.projectSwiper .swiper-pagination-bullet-active {
+    background: #7CF03D;
+    opacity: 1;
+    box-shadow: 0 0 10px #7CF03D;
+    width: 30px; /* Stretches the active dot into a modern pill shape */
+    border-radius: 10px;
+}
+
+/* Mobile Adjustments for Arrows */
+@media (max-width: 768px) {
+    .projects-interactive-wrapper {
+        padding: 0; /* Remove side padding on mobile */
+    }
+    .project-button-prev, .project-button-next {
+        display: none; /* Hide arrows on mobile, users will swipe instead! */
+    }
+}
+
 
 .assignment-section-title{
     color: white;

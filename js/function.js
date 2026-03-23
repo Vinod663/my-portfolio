@@ -94,3 +94,48 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // ... [Your existing achievementSwiper code is here] ...
+
+    // NEW: Initialize Swiper for Projects
+    var projectSwiper = new Swiper(".projectSwiper", {
+        slidesPerView: 1, // Default to 1 slide (for mobile)
+        spaceBetween: 20, // Space between cards
+        loop: true,       // Infinite looping
+        grabCursor: false, // Turned off because we use custom SVG cursors
+        
+        // Link the custom arrows
+        navigation: {
+            nextEl: ".project-button-next",
+            prevEl: ".project-button-prev",
+        },
+        
+        // Link the bottom dots
+        pagination: {
+            el: ".project-pagination",
+            clickable: true,
+        },
+        
+        // Responsive Breakpoints
+        breakpoints: {
+            /* Tablets */
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            /* Laptops & Desktops */
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        },
+        
+        // Optional: Auto-slide slowly
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+});
